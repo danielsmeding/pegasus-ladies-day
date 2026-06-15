@@ -1,0 +1,6 @@
+.DS_Store
+pegasus-server.log
+pegasus-server.err.log
+com.pegasus.ladiesday.server.plist
+scripts/serve-until-2026-06-21.sh
+LLM_HANDOVER.md

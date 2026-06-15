@@ -1,0 +1,452 @@
+:root {
+  --bg: #050505;
+  --panel: #101010;
+  --panel-2: #171717;
+  --line: #2a2a2a;
+  --text: #f4f4f4;
+  --muted: #969696;
+  --accent: #ffffff;
+  --green: #71e8a6;
+  --amber: #e6c46a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  width: min(100%, 680px);
+  margin: 0 auto;
+  padding: calc(12px + env(safe-area-inset-top)) 10px calc(18px + env(safe-area-inset-bottom));
+}
+
+.top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.top p,
+.meta,
+.rationale,
+.rule,
+.brief,
+.verify,
+.return-help,
+.money,
+.lucky,
+.insight {
+  color: var(--muted);
+}
+
+.top p {
+  margin: 0 0 3px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.55rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.cap {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 8px;
+  color: var(--green);
+  background: var(--panel);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.brief {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 6px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 8px 9px;
+  background: var(--panel);
+  font-size: 0.8rem;
+  line-height: 1.28;
+}
+
+.verify {
+  margin-bottom: 6px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 7px 9px;
+  background: #080808;
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.brief strong {
+  color: var(--text);
+}
+
+.brief p:last-child strong {
+  color: var(--amber);
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  gap: 7px;
+  padding: 8px 0 10px;
+  background: rgba(5, 5, 5, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.controls span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.stake-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.stake {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--text);
+  background: var(--panel);
+  font-weight: 900;
+}
+
+.stake.active {
+  color: #000;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.strategy-note {
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+
+.rule {
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 9px 10px;
+  background: var(--panel);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.rule strong {
+  color: var(--text);
+}
+
+.money {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.money div,
+.lucky {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel);
+}
+
+.money div {
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+}
+
+.money span,
+.lucky span,
+.tracker label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.money strong {
+  color: var(--green);
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+#netReturn.loss {
+  color: #ff8f8f;
+}
+
+.lucky {
+  display: grid;
+  grid-template-columns: 1fr 66px 66px 88px;
+  gap: 6px;
+  align-items: end;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.return-help {
+  margin: -2px 0 8px;
+  font-size: 0.74rem;
+  line-height: 1.25;
+}
+
+.lucky div {
+  display: grid;
+  gap: 2px;
+}
+
+.lucky strong {
+  color: var(--amber);
+  font-size: 0.92rem;
+  line-height: 1.15;
+}
+
+.lucky small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.lucky label,
+.tracker label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 6px;
+  color: var(--text);
+  background: #080808;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.races {
+  display: grid;
+  gap: 8px;
+}
+
+.race {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--panel);
+}
+
+.race-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.time {
+  color: var(--green);
+  font-size: 0.84rem;
+  font-weight: 950;
+}
+
+.risk {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 7px;
+  color: var(--amber);
+  background: #080808;
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.06rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.meta {
+  margin-top: 3px;
+  font-size: 0.76rem;
+}
+
+.race-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.race-tags span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 6px;
+  color: var(--muted);
+  background: #080808;
+  font-size: 0.64rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.betline {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) minmax(104px, auto);
+  gap: 8px;
+  align-items: baseline;
+  margin-top: 8px;
+  border-radius: 7px;
+  padding: 8px;
+  background: var(--panel-2);
+}
+
+.betline span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.betline strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+
+.betline em {
+  color: var(--green);
+  font-style: normal;
+  font-weight: 950;
+  font-size: 0.78rem;
+  line-height: 1.15;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.secondary em {
+  color: var(--amber);
+}
+
+.tertiary em {
+  color: var(--amber);
+}
+
+.bet-type {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.rationale {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.cover-track.disabled,
+.extra-track.disabled {
+  display: none;
+}
+
+.insight {
+  display: grid;
+  gap: 3px;
+  margin-top: 8px;
+  border-left: 2px solid var(--amber);
+  padding: 0 0 0 8px;
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.insight span,
+.insight-source {
+  color: var(--amber);
+  font-size: 0.66rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.insight-text {
+  color: var(--text);
+  font-size: 0.78rem;
+}
+
+@media (min-width: 620px) {
+  .races {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .top {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .lucky {
+    grid-template-columns: 1fr 64px;
+  }
+
+  .betline {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .betline em {
+    grid-column: 2;
+  }
+}
