@@ -477,7 +477,7 @@ function stakeLabel(stakeValue, code) {
   if (!stakeValue) return "GBP 0";
   if (code === "EW") {
     const half = stakeValue / 2;
-    return `${money(stakeValue)} total EW (${money(half)} W + ${money(half)} P)`;
+    return `${money(stakeValue)} EW total - ${money(half)} W / ${money(half)} P`;
   }
   return `${money(stakeValue)} W`;
 }
