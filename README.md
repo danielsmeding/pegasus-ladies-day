@@ -34,7 +34,7 @@ This is a recreational stake planner, not betting advice. Use only fun amounts, 
 
 ## Open On iPhone
 
-`index.html` is self-contained. To use it without a local server, AirDrop, iCloud Drive, or message that single file to the iPhone, then open it from the Files app or Safari.
+`index.html` is self-contained. `pegasus-ascot-offline.html` is the same standalone page with a phone-friendly filename for AirDrop, iCloud Drive, or messaging to the iPhone, then opening from the Files app or Safari.
 
 No server connection to the Mac is required. Progress and edited odds are stored locally in that browser on the iPhone.
 
@@ -59,6 +59,7 @@ Then open `http://127.0.0.1:8765/index.html`.
 - Ascot official Royal Ascot dates and race context.
 - Racing Post Ascot 18 June 2026 racecard, declared runners, good-to-firm going, forecasts, and staff verdicts.
 - Current Gold Cup reporting and social/forum scan around Scandinavia, Trawlerman, Rahiebb, Caballo De Mar, and Sweet William.
+- Tipster-performance scan: checked 2026 Royal Ascot Day 1 and 2025 Day 3 tips/results; weighted Joe Norris / GYTO and TalkSport highest where picks were verifiable.
 - Race pattern notes for big-field Ascot straight-course handicaps.
 - Kicktipp repository API review: The Odds API was useful there, but its current published sports list does not include horse racing.
 

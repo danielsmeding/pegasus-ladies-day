@@ -27,6 +27,7 @@ const races = [
     bet: "Win main; tiny saver only at bigger stakes.",
     rationale: "Aix La Chapelle is the clear forecast favourite, while the Racing Post verdict points to Revels as the value alternative. Two-year-old races stay noisy, so keep this contained.",
     insight: "Declared field is now 15 on good-to-firm ground. Social chatter is thin; use the live market plus the named verdict, not juvenile hype.",
+    tipSignal: "No audited high-trust current tipster edge found for this race. Keep the live forecast and Racing Post verdict ahead of social chatter.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "low",
     variance: "high",
@@ -51,6 +52,7 @@ const races = [
     bet: "Main win + each-way cover.",
     rationale: "The live verdict prefers Enceladus, with Cannes next best. Tierra Del Toro keeps a shorter-market extra angle if the selected stake is large enough.",
     insight: "The field is down to 19, but it is still a 3yo handicap with traffic and draw risk. Split only when the price and each-way terms make sense.",
+    tipSignal: "Last year's strongest Thursday tip source landed Merchant in this race type, but no equivalent current high-trust pick is published yet. Use card evidence first.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -77,6 +79,7 @@ const races = [
     bet: "Win main, tiny saver on cover.",
     rationale: "Legacy Link is the short forecast leader and the cleaner anchor. Gilded Prize is the closest market cover if the favourite feels too short.",
     insight: "Twelve-runner Group race, set weights, and good-to-firm ground make this cleaner than the handicaps. Bias the main pick.",
+    tipSignal: "Current professional/social signal is thin. Treat this as a market-and-racecard race rather than a tipster race.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
@@ -92,13 +95,14 @@ const races = [
     meta: "Group 1 - 2m4f - 11 runners - Good to Firm",
     risk: "feature",
     main: "Scandinavia",
-    cover: "Caballo De Mar",
+    cover: "Trawlerman",
     split: [3, 2],
-    odds: ["13/8", "10/1"],
-    codes: ["W", "EW"],
-    bet: "Scandinavia win; Caballo De Mar each-way.",
-    rationale: "Scandinavia remains the market anchor. The Racing Post verdict and wider press both keep Caballo De Mar alive as the underdog/value cover.",
-    insight: "Trawlerman is prominent in press and market chatter, but the light-sensitivity story adds uncertainty. Treat him as a watchlist price, not the main cover here.",
+    odds: ["13/8", "7/2"],
+    codes: ["W", "W"],
+    bet: "Scandinavia win; Trawlerman win saver. Caballo De Mar stays optional outsider.",
+    rationale: "Scandinavia remains the market anchor. The performance lens upgrades Trawlerman after last year's winning Thursday tip source backed him and current coverage still calls him value.",
+    insight: "Caballo De Mar remains the Racing Post verdict/underdog angle, but Trawlerman has the stronger checked tipster-history case. Keep any Caballo bet outside the normal cap.",
+    tipSignal: "Strongest checked Thursday source: TalkSport's 2025 Day 3 rundown had Trawlerman, Charles Darwin and Merchant, all winners. Current TalkSport overview again flags Trawlerman value.",
     eachWay: DEFAULT_EACH_WAY,
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "high",
@@ -124,6 +128,7 @@ const races = [
     bet: "Each-way only. Extra places if offered.",
     rationale: "The live verdict names Wechaad, Organise is the market guardrail, and Pathein keeps a declared high-weight price option.",
     insight: "Straight-mile heritage handicap remains high variance even with 30 declared. This is still the clearest race for extra-place each-way lines.",
+    tipSignal: "Big-field handicap signal is weak and noisy. Anonymous social tips are too unverified to override the declared card.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -150,6 +155,7 @@ const races = [
     bet: "Win main, saver only if price is fair.",
     rationale: "Endorsement is the forecast anchor. Mountain Cat is the named verdict angle at a saver price if you want cover.",
     insight: "Ten-runner Group 3 is a cleaner late card spot. Keep the saver tiny because it can dilute the main pick fast.",
+    tipSignal: "No current high-trust performance-backed pick found. Last year's TalkSport separate best-bet pick missed here, so keep this lower weight.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
@@ -172,6 +178,7 @@ const races = [
     bet: "Each-way. Stop after this race.",
     rationale: "The live verdict names River King, with Arctic Dawn as second pick. Both fit the each-way-only shape better than chasing the shortest price.",
     insight: "Twenty-nine-runner 7f handicap is still the late-day trap. Keep the planned split and do not increase stake to recover earlier results.",
+    tipSignal: "Late handicap tips are noisy. Use each-way terms and the Racing Post verdict; do not chase social steam at the end of the card.",
     eachWay: DEFAULT_EACH_WAY,
     fieldType: "big-field handicap",
     lastChecked: DEFAULT_LAST_CHECKED,
@@ -240,6 +247,7 @@ function render() {
     node.querySelector(".bet-type").textContent = betInstruction(race, coverStake);
     node.querySelector(".rationale").textContent = race.rationale;
     node.querySelector(".insight-text").textContent = race.insight;
+    node.querySelector(".tip-signal-text").textContent = race.tipSignal;
     node.querySelector(".insight-source").textContent = sourceSummary(race);
     wireRaceTracker(node, index, state, coverStake, extraStake);
     return node;
