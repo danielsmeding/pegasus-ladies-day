@@ -115,13 +115,15 @@ h1 {
   color: var(--amber);
 }
 
-.tipsters {
+.tipsters,
+.bookmakers {
   display: grid;
   gap: 6px;
   margin-bottom: 8px;
 }
 
-.tipsters div {
+.tipsters div,
+.bookmakers div {
   display: grid;
   gap: 3px;
   border: 1px solid var(--line);
@@ -131,6 +133,7 @@ h1 {
 }
 
 .tipsters span,
+.bookmakers span,
 .tip-signal span {
   color: var(--amber);
   font-size: 0.66rem;
@@ -139,13 +142,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.tipsters strong {
+.tipsters strong,
+.bookmakers strong {
   color: var(--text);
   font-size: 0.86rem;
   line-height: 1.2;
 }
 
 .tipsters p,
+.bookmakers p,
 .tip-signal p {
   color: var(--muted);
   font-size: 0.76rem;
