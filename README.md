@@ -57,8 +57,8 @@ Then open `http://127.0.0.1:8765/index.html`.
 ## Sources Used For Current Notes
 
 - Ascot official Royal Ascot dates and race context.
-- Racing Post Ascot 18 June 2026 racecard, going, entries, and card ratings.
-- Current Gold Cup reporting around Scandinavia, Trawlerman, Rahiebb, Caballo De Mar, and Sweet William.
+- Racing Post Ascot 18 June 2026 racecard, declared runners, good-to-firm going, forecasts, and staff verdicts.
+- Current Gold Cup reporting and social/forum scan around Scandinavia, Trawlerman, Rahiebb, Caballo De Mar, and Sweet William.
 - Race pattern notes for big-field Ascot straight-course handicaps.
 - Kicktipp repository API review: The Odds API was useful there, but its current published sports list does not include horse racing.
 

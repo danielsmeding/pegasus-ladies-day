@@ -4,7 +4,7 @@ const STORAGE_KEY = "pegasus.ladies-day.black.v1";
 const TRACKER_KEY = "pegasus.ladies-day.tracker.v1";
 const LUCKY_KEY = "pegasus.ladies-day.lucky.v1";
 const SMART_ALLOCATIONS = [5, 25, 30, 45, 40, 25, 5];
-const DEFAULT_LAST_CHECKED = "2026-06-14";
+const DEFAULT_LAST_CHECKED = "2026-06-16";
 const DEFAULT_EACH_WAY = {
   fraction: 0.2,
   places: null,
@@ -17,40 +17,40 @@ const races = [
   {
     time: "14:30",
     title: "Chesham Stakes",
-    meta: "Listed - 7f - 19 runners",
+    meta: "Listed - 7f - 15 runners - Good to Firm",
     risk: "2yo",
     main: "Aix La Chapelle",
-    cover: "Nola Soul",
-    split: [5, 0],
-    odds: ["3/1", ""],
-    codes: ["W", ""],
-    bet: "Win only. Keep this small.",
-    rationale: "Aix La Chapelle and Nola Soul sit near the top of the card ratings. Two-year-old races are noisy, so do not over-stake the opener.",
-    insight: "Chesham runners need stamina in the pedigree, so treat raw juvenile hype carefully. Ratings are close; use a small win bet only.",
+    cover: "Revels",
+    split: [4, 1],
+    odds: ["13/8", "11/1"],
+    codes: ["W", "W"],
+    bet: "Win main; tiny saver only at bigger stakes.",
+    rationale: "Aix La Chapelle is the clear forecast favourite, while the Racing Post verdict points to Revels as the value alternative. Two-year-old races stay noisy, so keep this contained.",
+    insight: "Declared field is now 15 on good-to-firm ground. Social chatter is thin; use the live market plus the named verdict, not juvenile hype.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "low",
     variance: "high",
     sourceQuality: "medium",
     reasonToAvoid: "Juvenile form is thin and market hype can be unreliable.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" },
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
       { label: "Ascot official", checkedAt: DEFAULT_LAST_CHECKED, note: "Race order / official schedule" }
     ]
   },
   {
     time: "15:05",
     title: "King George V Stakes",
-    meta: "Heritage Handicap - 1m4f - 40 runners",
+    meta: "Heritage Handicap - 1m4f - 19 runners - Good to Firm",
     risk: "handicap",
-    main: "New Zealand",
-    cover: "Mr Colonel",
+    main: "Enceladus",
+    cover: "Cannes",
     extra: "Tierra Del Toro",
     split: [3, 2],
-    odds: ["5/1", "8/1", "10/1"],
+    odds: ["12/1", "11/1", "15/2"],
     codes: ["W", "EW", "EW"],
     bet: "Main win + each-way cover.",
-    rationale: "New Zealand has one of the stronger RPR profiles. Mr Colonel adds handicap cover with a high speed/rating blend.",
-    insight: "Forty-runner 3yo handicap means traffic risk. Add Tierra Del Toro only when the race stake is at least GBP 25.",
+    rationale: "The live verdict prefers Enceladus, with Cannes next best. Tierra Del Toro keeps a shorter-market extra angle if the selected stake is large enough.",
+    insight: "The field is down to 19, but it is still a 3yo handicap with traffic and draw risk. Split only when the price and each-way terms make sense.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -60,45 +60,45 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Large-field handicap; use the extra horse only if each-way terms are good.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" },
-      { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Big-field handicap variance, not a live tip source" }
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
+      { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Handicap variance, not a live tip source" }
     ]
   },
   {
     time: "15:40",
     title: "Ribblesdale Stakes",
-    meta: "Group 2 - 1m4f - 17 runners",
+    meta: "Group 2 - 1m4f - 12 runners - Good to Firm",
     risk: "fillies",
-    main: "Cameo",
-    cover: "Warriors Whisper",
+    main: "Legacy Link",
+    cover: "Gilded Prize",
     split: [4, 1],
-    odds: ["7/2", "7/1"],
+    odds: ["6/4", "3/1"],
     codes: ["W", "W"],
     bet: "Win main, tiny saver on cover.",
-    rationale: "Cameo is the ratings pick on the current card. Warriors Whisper is the better-priced backup if you want one.",
-    insight: "This is cleaner than the big handicaps: fewer runners, set weights, and 1m4f form should count. Bias the main pick.",
+    rationale: "Legacy Link is the short forecast leader and the cleaner anchor. Gilded Prize is the closest market cover if the favourite feels too short.",
+    insight: "Twelve-runner Group race, set weights, and good-to-firm ground make this cleaner than the handicaps. Bias the main pick.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
     sourceQuality: "medium",
     reasonToAvoid: "Still a fillies' Group race; recheck going, jockeys, and market strength.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" }
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" }
     ]
   },
   {
     time: "16:15",
     title: "Gold Cup",
-    meta: "Group 1 - 2m4f - 13 runners",
+    meta: "Group 1 - 2m4f - 11 runners - Good to Firm",
     risk: "feature",
     main: "Scandinavia",
     cover: "Caballo De Mar",
     split: [3, 2],
-    odds: ["5/4", "10/1"],
+    odds: ["13/8", "10/1"],
     codes: ["W", "EW"],
     bet: "Scandinavia win; Caballo De Mar each-way.",
-    rationale: "Scandinavia is the obvious class/stayer profile. Caballo De Mar is the value angle in current reporting. Avoid leaning too hard on Trawlerman if the day is bright.",
-    insight: "News angle: Caballo De Mar is being framed as the underdog value; Trawlerman has a light-sensitivity caveat on a sunny day.",
+    rationale: "Scandinavia remains the market anchor. The Racing Post verdict and wider press both keep Caballo De Mar alive as the underdog/value cover.",
+    insight: "Trawlerman is prominent in press and market chatter, but the light-sensitivity story adds uncertainty. Treat him as a watchlist price, not the main cover here.",
     eachWay: DEFAULT_EACH_WAY,
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "high",
@@ -106,24 +106,24 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Feature-race prices can move sharply; verify going and final market.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" },
-      { label: "Racing press reporting", checkedAt: DEFAULT_LAST_CHECKED, note: "Gold Cup angle; URLs and terms need final verification" }
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
+      { label: "Racing press and social scan", checkedAt: DEFAULT_LAST_CHECKED, note: "Gold Cup chatter; low weight unless aligned with card and market" }
     ]
   },
   {
     time: "16:50",
     title: "Britannia Stakes",
-    meta: "Heritage Handicap - 1m - 54 runners",
+    meta: "Heritage Handicap - 1m - 30 runners - Good to Firm",
     risk: "chaos",
-    main: "Pathein",
-    cover: "Dorset",
-    extra: "Isaac Newton",
+    main: "Wechaad",
+    cover: "Organise",
+    extra: "Pathein",
     split: [3, 2],
-    odds: ["7/1", "11/1", "12/1"],
+    odds: ["9/1", "7/1", "16/1"],
     codes: ["EW", "EW", "EW"],
     bet: "Each-way only. Extra places if offered.",
-    rationale: "Huge field. Pathein has a stronger RPR shape than many near the top; Dorset gives a second Aidan O'Brien handicap angle.",
-    insight: "Straight-mile heritage handicap with 50+ entries is high variance. This is the clearest race for three each-way lines if extra places are available.",
+    rationale: "The live verdict names Wechaad, Organise is the market guardrail, and Pathein keeps a declared high-weight price option.",
+    insight: "Straight-mile heritage handicap remains high variance even with 30 declared. This is still the clearest race for extra-place each-way lines.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -133,45 +133,45 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Huge-field handicap; only use three each-way lines with suitable extra-place terms.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" },
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
       { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Big-field straight-mile handicap variance, not a live tip source" }
     ]
   },
   {
     time: "17:35",
     title: "Hampton Court Stakes",
-    meta: "Group 3 - 1m2f - 16 runners",
+    meta: "Group 3 - 1m2f - 10 runners - Good to Firm",
     risk: "cleaner",
-    main: "Causeway",
-    cover: "Oceans Four",
+    main: "Endorsement",
+    cover: "Mountain Cat",
     split: [4, 1],
-    odds: ["3/1", "8/1"],
+    odds: ["2/1", "11/1"],
     codes: ["W", "W"],
     bet: "Win main, saver only if price is fair.",
-    rationale: "Causeway is the standout card profile. Oceans Four is useful cover if the favourite is too short.",
-    insight: "Three-year-old Group race, so class should matter more than draw luck. Skip the saver if Oceans Four is not a real price.",
+    rationale: "Endorsement is the forecast anchor. Mountain Cat is the named verdict angle at a saver price if you want cover.",
+    insight: "Ten-runner Group 3 is a cleaner late card spot. Keep the saver tiny because it can dilute the main pick fast.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
     sourceQuality: "medium",
     reasonToAvoid: "Cleaner race, but saver can dilute the main pick if the cover price shortens.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" }
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" }
     ]
   },
   {
     time: "18:10",
     title: "Buckingham Palace Stakes",
-    meta: "Handicap - 7f - 62 runners",
+    meta: "Handicap - 7f - 29 runners - Good to Firm",
     risk: "final trap",
-    main: "Cerulean Bay",
-    cover: "Glenfinnan",
+    main: "River King",
+    cover: "Arctic Dawn",
     split: [3, 2],
-    odds: ["9/1", "15/1"],
+    odds: ["10/1", "14/1"],
     codes: ["EW", "EW"],
     bet: "Each-way. Stop after this race.",
-    rationale: "Cerulean Bay heads the weights with strong form. Glenfinnan has course-and-distance appeal and a lower-weight profile.",
-    insight: "Sixty-plus-entry 7f handicap is the late-day trap. Keep the planned split and do not increase stake to recover earlier results.",
+    rationale: "The live verdict names River King, with Arctic Dawn as second pick. Both fit the each-way-only shape better than chasing the shortest price.",
+    insight: "Twenty-nine-runner 7f handicap is still the late-day trap. Keep the planned split and do not increase stake to recover earlier results.",
     eachWay: DEFAULT_EACH_WAY,
     fieldType: "big-field handicap",
     lastChecked: DEFAULT_LAST_CHECKED,
@@ -180,7 +180,7 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Late big-field handicap; Smart 175 deliberately keeps this low if you leave early.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Racecard / runners / ratings; final checks still needed" },
+      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
       { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Big-field handicap variance, not a live tip source" }
     ]
   }
