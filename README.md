@@ -10,7 +10,7 @@ It is intentionally simple and compact for checking on an iPhone at Ascot:
 - one Smart 175 mode that keeps a GBP 175 event cap with at least GBP 5 per race,
 - Smart 175 keeps the final race at GBP 5 in case you leave before the end,
 - every individual bet is at least GBP 5,
-- each horse line shows the current win odds in fractional format plus `W` for win or `EW` for each-way,
+- each horse line shows the current win odds in fractional format, decimal/multiplier format, plus `W` for win or `EW` for each-way,
 - each-way stakes are shown as total stake, split half win and half place,
 - selected big-field handicaps can show a third `Extra` horse when the strategy stake is at least GBP 25,
 - one top-line event summary and one optional outsider tip outside the normal race cap,
@@ -60,6 +60,7 @@ Then open `http://127.0.0.1:8765/index.html`.
 - 18 June 2026 morning update: TalkSport / Joe Norris / GYTO Day 3 tips and named bookmaker prices.
 - 18 June 2026 morning update: Guardian Talking Horses Thursday selections and day-two results context.
 - 18 June 2026 morning update: Sun / Matt Chapman / Times tip cross-checks, with social/search chatter kept lower weight unless it aligned with named racing desks.
+- 18 June 2026 final pre-race sweep: Templegate counter-signals added, with Laureate Crown replacing Outback Heat as the Britannia optional third.
 - Current Gold Cup reporting around Scandinavia, Rahiebb, Trawlerman, Carmers, and Miss Alpilles.
 - Bookmaker-price scan: current named prices are split across Betfred, SBK, Paddy Power, Coral, bet365, and BoyleSports; still use live best price plus BOG rather than assuming one book is always best.
 - Race pattern notes for big-field Ascot straight-course handicaps.

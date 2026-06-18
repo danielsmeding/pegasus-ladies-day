@@ -79,7 +79,7 @@ const races = [
     bet: "Each-way Earth Shot; Johanna Walsh saver if extra places are fair.",
     rationale: "GYTO and Guardian both like Earth Shot as the value alternative to Legacy Link. Sun/Times make Johanna Walsh the secondary improving filly.",
     insight: "Legacy Link is respected but the quick Oaks turnaround is a fair reason to oppose at short odds. Keep this value-led rather than favourite-led.",
-    tipSignal: "Strongest alignment away from the favourite: GYTO + Guardian Earth Shot, Sun + Times Johanna Walsh. That is better than relying on social chatter.",
+    tipSignal: "Strongest value alignment away from the favourite: GYTO + Guardian Earth Shot, Sun + Times Johanna Walsh. Templegate keeps Legacy Link as the short-price counter.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
@@ -103,7 +103,7 @@ const races = [
     bet: "Scandinavia win; Rahiebb win saver. Miss Alpilles is the wild outsider only.",
     rationale: "Scandinavia is the strongest consensus horse: GYTO, Sun and Times all point his way. Rahiebb is the common danger angle after the Leger/Yorkshire Cup form.",
     insight: "Trawlerman is respected as last year's winner but the long layoff/fitness concern keeps him below Rahiebb for the normal saver. Keep any huge-price outsider outside the cap.",
-    tipSignal: "Morning consensus is unusually clear for the feature: Scandinavia top, Rahiebb danger. Guardian goes contrarian with Carmers; Matt Chapman suggests Miss Alpilles at 100/1 for fun money only.",
+    tipSignal: "Morning consensus keeps Scandinavia top. Rahiebb is the saver/danger angle; Templegate and Tom Lunn keep Trawlerman alive. Miss Alpilles remains fun money only.",
     eachWay: DEFAULT_EACH_WAY,
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "high",
@@ -122,14 +122,14 @@ const races = [
     risk: "chaos",
     main: "Moonfall",
     cover: "Jamestown",
-    extra: "Outback Heat",
+    extra: "Laureate Crown",
     split: [3, 2],
-    odds: ["10/1", "14/1", "11/1"],
+    odds: ["10/1", "14/1", "14/1"],
     codes: ["EW", "EW", "EW"],
     bet: "Each-way only. Prioritise books with extra places.",
-    rationale: "GYTO puts up Moonfall; Guardian and Times both flag Jamestown; Sun's preview gives Outback Heat as the course-and-distance outsider.",
+    rationale: "GYTO puts up Moonfall; Guardian and Times both flag Jamestown; Templegate makes Laureate Crown his 14/1 NAP.",
     insight: "This remains the most fragile race on the card. The app now spreads named press angles, but bookmaker extra-place terms matter more than tiny price differences.",
-    tipSignal: "Named press is useful but not unified: Moonfall, Jamestown, Outback Heat, Exclusive Code and Wechaad all appear. Treat it as an extra-place each-way race only.",
+    tipSignal: "Named press is useful but not unified: Moonfall, Jamestown, Laureate Crown, Exclusive Code and Wechaad all appear. Treat it as an extra-place each-way race only.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -140,7 +140,7 @@ const races = [
     reasonToAvoid: "Huge-field handicap; only use three each-way lines with suitable extra-place terms.",
     sources: [
       { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Moonfall each-way at 10/1" },
-      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Jamestown and Outback Heat alternatives" }
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Jamestown and Laureate Crown alternatives" }
     ]
   },
   {
@@ -181,7 +181,7 @@ const races = [
     bet: "Each-way only. Stop after this race.",
     rationale: "GYTO puts up The Wizard Of Eye, Guardian likes Blue Brother, and Matt Chapman makes Apiarist his big handicap swing.",
     insight: "Late big-field handicap: only play if you still want action and can get extra places. Do not chase earlier misses here.",
-    tipSignal: "Best named angles are split three ways: Wizard Of Eye, Blue Brother, Apiarist. Anonymous social tips still get no upgrade unless they match live market strength.",
+    tipSignal: "Best named angles are split: Wizard Of Eye, Blue Brother, Apiarist, Royal Velvet and Cosi Bello all appear. Do not chase; require extra-place terms.",
     eachWay: DEFAULT_EACH_WAY,
     fieldType: "big-field handicap",
     lastChecked: DEFAULT_LAST_CHECKED,
@@ -481,7 +481,12 @@ function formatOdds(value) {
 }
 
 function horseWithOdds(horse, odds, code) {
-  return `${horse} · ${formatOdds(odds)} · ${code}`;
+  return `${horse} · ${formatOdds(odds)} · ${oddsMultiplier(odds)} · ${code}`;
+}
+
+function oddsMultiplier(value) {
+  const decimalOdds = oddsToDecimal(value);
+  return decimalOdds ? `${decimalOdds.toFixed(2)}x` : "n/a";
 }
 
 function stakeLabel(stakeValue, code) {
