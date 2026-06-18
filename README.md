@@ -57,10 +57,11 @@ Then open `http://127.0.0.1:8765/index.html`.
 ## Sources Used For Current Notes
 
 - Ascot official Royal Ascot dates and race context.
-- Racing Post Ascot 18 June 2026 racecard, declared runners, good-to-firm going, forecasts, and staff verdicts.
-- Current Gold Cup reporting and social/forum scan around Scandinavia, Trawlerman, Rahiebb, Caballo De Mar, and Sweet William.
-- Tipster-performance scan: checked 2026 Royal Ascot Day 1 and 2025 Day 3 tips/results; weighted Joe Norris / GYTO and TalkSport highest where picks were verifiable.
-- Bookmaker-price scan: public 2026 BOG guides consistently pointed to Betfred, bet365, and Betway as useful racing checks, but no free auditable source provided true bookmaker-by-bookmaker year-to-date horse-racing price history.
+- 18 June 2026 morning update: TalkSport / Joe Norris / GYTO Day 3 tips and named bookmaker prices.
+- 18 June 2026 morning update: Guardian Talking Horses Thursday selections and day-two results context.
+- 18 June 2026 morning update: Sun / Matt Chapman / Times tip cross-checks, with social/search chatter kept lower weight unless it aligned with named racing desks.
+- Current Gold Cup reporting around Scandinavia, Rahiebb, Trawlerman, Carmers, and Miss Alpilles.
+- Bookmaker-price scan: current named prices are split across Betfred, SBK, Paddy Power, Coral, bet365, and BoyleSports; still use live best price plus BOG rather than assuming one book is always best.
 - Race pattern notes for big-field Ascot straight-course handicaps.
 - Kicktipp repository API review: The Odds API was useful there, but its current published sports list does not include horse racing.
 

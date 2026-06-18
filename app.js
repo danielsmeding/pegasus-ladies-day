@@ -4,7 +4,7 @@ const STORAGE_KEY = "pegasus.ladies-day.black.v1";
 const TRACKER_KEY = "pegasus.ladies-day.tracker.v1";
 const LUCKY_KEY = "pegasus.ladies-day.lucky.v1";
 const SMART_ALLOCATIONS = [5, 25, 30, 45, 40, 25, 5];
-const DEFAULT_LAST_CHECKED = "2026-06-16";
+const DEFAULT_LAST_CHECKED = "2026-06-18";
 const DEFAULT_EACH_WAY = {
   fraction: 0.2,
   places: null,
@@ -17,42 +17,42 @@ const races = [
   {
     time: "14:30",
     title: "Chesham Stakes",
-    meta: "Listed - 7f - 15 runners - Good to Firm",
+    meta: "Listed - 7f - 2yo - Good to Firm",
     risk: "2yo",
-    main: "Aix La Chapelle",
-    cover: "Revels",
-    split: [4, 1],
-    odds: ["13/8", "11/1"],
-    codes: ["W", "W"],
-    bet: "Win main; tiny saver only at bigger stakes.",
-    rationale: "Aix La Chapelle is the clear forecast favourite, while the Racing Post verdict points to Revels as the value alternative. Two-year-old races stay noisy, so keep this contained.",
-    insight: "Declared field is now 15 on good-to-firm ground. Social chatter is thin; use the live market plus the named verdict, not juvenile hype.",
-    tipSignal: "No audited high-trust current tipster edge found for this race. Keep the live forecast and Racing Post verdict ahead of social chatter.",
+    main: "Sea Venture",
+    cover: "Aix La Chapelle",
+    split: [3, 2],
+    odds: ["11/2", "13/8"],
+    codes: ["EW", "W"],
+    bet: "Sea Venture each-way; Aix La Chapelle win saver only if price holds.",
+    rationale: "Joe Norris/GYTO and Guardian both moved the value angle to Sea Venture, while Aix La Chapelle remains the obvious short-price Aidan O'Brien danger.",
+    insight: "Juvenile opener, so do not over-stake. Sea Venture is the better price/value play; Aix is cover against the favourite simply being too good.",
+    tipSignal: "Current morning alignment: GYTO and Guardian select Sea Venture. Matt Chapman sides with Aix La Chapelle; Times prefers Nola Soul, so keep stake small.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "low",
     variance: "high",
     sourceQuality: "medium",
     reasonToAvoid: "Juvenile form is thin and market hype can be unreliable.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
-      { label: "Ascot official", checkedAt: DEFAULT_LAST_CHECKED, note: "Race order / official schedule" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Sea Venture each-way at 11/2" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Sea Venture, Aix La Chapelle and Nola Soul cross-check" }
     ]
   },
   {
     time: "15:05",
     title: "King George V Stakes",
-    meta: "Heritage Handicap - 1m4f - 19 runners - Good to Firm",
+    meta: "Heritage Handicap - 1m4f - 3yo - Good to Firm",
     risk: "handicap",
     main: "Enceladus",
-    cover: "Cannes",
-    extra: "Tierra Del Toro",
+    cover: "Heyzoom",
+    extra: "Into The Light",
     split: [3, 2],
-    odds: ["12/1", "11/1", "15/2"],
-    codes: ["W", "EW", "EW"],
-    bet: "Main win + each-way cover.",
-    rationale: "The live verdict prefers Enceladus, with Cannes next best. Tierra Del Toro keeps a shorter-market extra angle if the selected stake is large enough.",
-    insight: "The field is down to 19, but it is still a 3yo handicap with traffic and draw risk. Split only when the price and each-way terms make sense.",
-    tipSignal: "Last year's strongest Thursday tip source landed Merchant in this race type, but no equivalent current high-trust pick is published yet. Use card evidence first.",
+    odds: ["23/2", "10/1", "8/1"],
+    codes: ["EW", "EW", "EW"],
+    bet: "Each-way Enceladus; Heyzoom cover. Add Into The Light only in Smart 175.",
+    rationale: "GYTO keeps Enceladus as the price play, while Guardian and Matt Chapman flag Heyzoom. Times adds Into The Light, so it is the optional third only.",
+    insight: "This is still a messy 3yo staying handicap. Use extra places and BOG; do not take a short price in a race where several progressive profiles overlap.",
+    tipSignal: "Best current signal is split but useful: GYTO Enceladus, Guardian/Sun Heyzoom, Times Into The Light. That supports each-way spread, not a single win-only bet.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -62,47 +62,48 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Large-field handicap; use the extra horse only if each-way terms are good.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
-      { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Handicap variance, not a live tip source" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Enceladus each-way at 23/2" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Heyzoom and Into The Light counter-signals" }
     ]
   },
   {
     time: "15:40",
     title: "Ribblesdale Stakes",
-    meta: "Group 2 - 1m4f - 12 runners - Good to Firm",
+    meta: "Group 2 - 1m4f - 3yo fillies - Good to Firm",
     risk: "fillies",
-    main: "Legacy Link",
-    cover: "Gilded Prize",
-    split: [4, 1],
-    odds: ["6/4", "3/1"],
-    codes: ["W", "W"],
-    bet: "Win main, tiny saver on cover.",
-    rationale: "Legacy Link is the short forecast leader and the cleaner anchor. Gilded Prize is the closest market cover if the favourite feels too short.",
-    insight: "Twelve-runner Group race, set weights, and good-to-firm ground make this cleaner than the handicaps. Bias the main pick.",
-    tipSignal: "Current professional/social signal is thin. Treat this as a market-and-racecard race rather than a tipster race.",
+    main: "Earth Shot",
+    cover: "Johanna Walsh",
+    split: [3, 2],
+    odds: ["11/2", "10/1"],
+    codes: ["EW", "EW"],
+    bet: "Each-way Earth Shot; Johanna Walsh saver if extra places are fair.",
+    rationale: "GYTO and Guardian both like Earth Shot as the value alternative to Legacy Link. Sun/Times make Johanna Walsh the secondary improving filly.",
+    insight: "Legacy Link is respected but the quick Oaks turnaround is a fair reason to oppose at short odds. Keep this value-led rather than favourite-led.",
+    tipSignal: "Strongest alignment away from the favourite: GYTO + Guardian Earth Shot, Sun + Times Johanna Walsh. That is better than relying on social chatter.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
     sourceQuality: "medium",
     reasonToAvoid: "Still a fillies' Group race; recheck going, jockeys, and market strength.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Earth Shot each-way at 11/2" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Earth Shot and Johanna Walsh value angles" }
     ]
   },
   {
     time: "16:15",
     title: "Gold Cup",
-    meta: "Group 1 - 2m4f - 11 runners - Good to Firm",
+    meta: "Group 1 - 2m4f - Good to Firm",
     risk: "feature",
     main: "Scandinavia",
-    cover: "Trawlerman",
+    cover: "Rahiebb",
     split: [3, 2],
-    odds: ["13/8", "7/2"],
+    odds: ["13/8", "5/1"],
     codes: ["W", "W"],
-    bet: "Scandinavia win; Trawlerman win saver. Caballo De Mar stays optional outsider.",
-    rationale: "Scandinavia remains the market anchor. The performance lens upgrades Trawlerman after last year's winning Thursday tip source backed him and current coverage still calls him value.",
-    insight: "Caballo De Mar remains the Racing Post verdict/underdog angle, but Trawlerman has the stronger checked tipster-history case. Keep any Caballo bet outside the normal cap.",
-    tipSignal: "Strongest checked Thursday source: TalkSport's 2025 Day 3 rundown had Trawlerman, Charles Darwin and Merchant, all winners. Current TalkSport overview again flags Trawlerman value.",
+    bet: "Scandinavia win; Rahiebb win saver. Miss Alpilles is the wild outsider only.",
+    rationale: "Scandinavia is the strongest consensus horse: GYTO, Sun and Times all point his way. Rahiebb is the common danger angle after the Leger/Yorkshire Cup form.",
+    insight: "Trawlerman is respected as last year's winner but the long layoff/fitness concern keeps him below Rahiebb for the normal saver. Keep any huge-price outsider outside the cap.",
+    tipSignal: "Morning consensus is unusually clear for the feature: Scandinavia top, Rahiebb danger. Guardian goes contrarian with Carmers; Matt Chapman suggests Miss Alpilles at 100/1 for fun money only.",
     eachWay: DEFAULT_EACH_WAY,
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "high",
@@ -110,25 +111,25 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Feature-race prices can move sharply; verify going and final market.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
-      { label: "Racing press and social scan", checkedAt: DEFAULT_LAST_CHECKED, note: "Gold Cup chatter; low weight unless aligned with card and market" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Scandinavia win at 13/8; Rahiebb danger" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Scandinavia consensus with Carmers/Miss Alpilles outsider noise" }
     ]
   },
   {
     time: "16:50",
     title: "Britannia Stakes",
-    meta: "Heritage Handicap - 1m - 30 runners - Good to Firm",
+    meta: "Heritage Handicap - 1m - 3yo colts/geldings - Good to Firm",
     risk: "chaos",
-    main: "Wechaad",
-    cover: "Organise",
-    extra: "Pathein",
+    main: "Moonfall",
+    cover: "Jamestown",
+    extra: "Outback Heat",
     split: [3, 2],
-    odds: ["9/1", "7/1", "16/1"],
+    odds: ["10/1", "14/1", "11/1"],
     codes: ["EW", "EW", "EW"],
-    bet: "Each-way only. Extra places if offered.",
-    rationale: "The live verdict names Wechaad, Organise is the market guardrail, and Pathein keeps a declared high-weight price option.",
-    insight: "Straight-mile heritage handicap remains high variance even with 30 declared. This is still the clearest race for extra-place each-way lines.",
-    tipSignal: "Big-field handicap signal is weak and noisy. Anonymous social tips are too unverified to override the declared card.",
+    bet: "Each-way only. Prioritise books with extra places.",
+    rationale: "GYTO puts up Moonfall; Guardian and Times both flag Jamestown; Sun's preview gives Outback Heat as the course-and-distance outsider.",
+    insight: "This remains the most fragile race on the card. The app now spreads named press angles, but bookmaker extra-place terms matter more than tiny price differences.",
+    tipSignal: "Named press is useful but not unified: Moonfall, Jamestown, Outback Heat, Exclusive Code and Wechaad all appear. Treat it as an extra-place each-way race only.",
     eachWay: DEFAULT_EACH_WAY,
     allowExtra: true,
     fieldType: "big-field handicap",
@@ -138,47 +139,49 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Huge-field handicap; only use three each-way lines with suitable extra-place terms.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
-      { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Big-field straight-mile handicap variance, not a live tip source" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Moonfall each-way at 10/1" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Jamestown and Outback Heat alternatives" }
     ]
   },
   {
     time: "17:35",
     title: "Hampton Court Stakes",
-    meta: "Group 3 - 1m2f - 10 runners - Good to Firm",
+    meta: "Group 3 - 1m2f - 3yo - Good to Firm",
     risk: "cleaner",
     main: "Endorsement",
-    cover: "Mountain Cat",
+    cover: "Generic",
     split: [4, 1],
-    odds: ["2/1", "11/1"],
+    odds: ["9/4", "7/1"],
     codes: ["W", "W"],
-    bet: "Win main, saver only if price is fair.",
-    rationale: "Endorsement is the forecast anchor. Mountain Cat is the named verdict angle at a saver price if you want cover.",
-    insight: "Ten-runner Group 3 is a cleaner late card spot. Keep the saver tiny because it can dilute the main pick fast.",
-    tipSignal: "No current high-trust performance-backed pick found. Last year's TalkSport separate best-bet pick missed here, so keep this lower weight.",
+    bet: "Endorsement win; small Generic saver only if price is still fair.",
+    rationale: "GYTO and Sun both back Endorsement, and Joe's top double includes him with Scandinavia. Guardian/Times both make Generic a serious alternative.",
+    insight: "This is one of the cleaner win-bet races, but the favourite is not bombproof. If Endorsement shortens hard, reduce or skip the saver rather than force it.",
+    tipSignal: "Strongest late-card anchor is Endorsement. Generic is the best counter-signal from Guardian/Times; Morshdi is the Matt Chapman rebound angle.",
     lastChecked: DEFAULT_LAST_CHECKED,
     confidence: "medium",
     variance: "medium",
     sourceQuality: "medium",
     reasonToAvoid: "Cleaner race, but saver can dilute the main pick if the cover price shortens.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "Endorsement win at 9/4" },
+      { label: "Guardian / Times / Sun", checkedAt: DEFAULT_LAST_CHECKED, note: "Generic and Morshdi counter-signals" }
     ]
   },
   {
     time: "18:10",
     title: "Buckingham Palace Stakes",
-    meta: "Handicap - 7f - 29 runners - Good to Firm",
+    meta: "Handicap - 7f - Good to Firm",
     risk: "final trap",
-    main: "River King",
-    cover: "Arctic Dawn",
+    main: "The Wizard Of Eye",
+    cover: "Blue Brother",
+    extra: "Apiarist",
     split: [3, 2],
-    odds: ["10/1", "14/1"],
-    codes: ["EW", "EW"],
-    bet: "Each-way. Stop after this race.",
-    rationale: "The live verdict names River King, with Arctic Dawn as second pick. Both fit the each-way-only shape better than chasing the shortest price.",
-    insight: "Twenty-nine-runner 7f handicap is still the late-day trap. Keep the planned split and do not increase stake to recover earlier results.",
-    tipSignal: "Late handicap tips are noisy. Use each-way terms and the Racing Post verdict; do not chase social steam at the end of the card.",
+    odds: ["12/1", "10/1", "20/1"],
+    codes: ["EW", "EW", "EW"],
+    bet: "Each-way only. Stop after this race.",
+    rationale: "GYTO puts up The Wizard Of Eye, Guardian likes Blue Brother, and Matt Chapman makes Apiarist his big handicap swing.",
+    insight: "Late big-field handicap: only play if you still want action and can get extra places. Do not chase earlier misses here.",
+    tipSignal: "Best named angles are split three ways: Wizard Of Eye, Blue Brother, Apiarist. Anonymous social tips still get no upgrade unless they match live market strength.",
     eachWay: DEFAULT_EACH_WAY,
     fieldType: "big-field handicap",
     lastChecked: DEFAULT_LAST_CHECKED,
@@ -187,15 +190,15 @@ const races = [
     sourceQuality: "medium",
     reasonToAvoid: "Late big-field handicap; Smart 175 deliberately keeps this low if you leave early.",
     sources: [
-      { label: "Racing Post racecard", checkedAt: DEFAULT_LAST_CHECKED, note: "Declared runners / forecast / staff verdict" },
-      { label: "General race-pattern logic", checkedAt: DEFAULT_LAST_CHECKED, note: "Big-field handicap variance, not a live tip source" }
+      { label: "GYTO / TalkSport", checkedAt: DEFAULT_LAST_CHECKED, note: "The Wizard Of Eye each-way at 12/1" },
+      { label: "Guardian / Sun / Times", checkedAt: DEFAULT_LAST_CHECKED, note: "Blue Brother, Apiarist and Cosi Bello alternatives" }
     ]
   }
 ];
 
 let strategy = readStrategy();
 let tracker = readJson(TRACKER_KEY, {});
-let lucky = readJson(LUCKY_KEY, { stake: 0, odds: "10/1", result: "pending" });
+let lucky = readJson(LUCKY_KEY, { stake: 0, odds: "100/1", result: "pending" });
 const raceRoot = document.getElementById("races");
 const template = document.getElementById("raceTemplate");
 const buttons = Array.from(document.querySelectorAll(".stake"));
@@ -305,11 +308,11 @@ function wireRaceTracker(node, index, state, coverStake, extraStake) {
 
 function wireLuckyInputs() {
   luckyStake.value = String(lucky.stake || 0);
-  luckyOdds.value = formatOdds(lucky.odds || "10/1");
+  luckyOdds.value = formatOdds(lucky.odds || "100/1");
   setResultOptions(luckyResult, LUCKY_CODE, normalizeResult(lucky.result || "pending", LUCKY_CODE));
 
   luckyStake.addEventListener("input", () => updateLucky({ stake: numberOrDefault(luckyStake.value, 0) }));
-  luckyOdds.addEventListener("input", () => updateLucky({ odds: normalizeOdds(luckyOdds.value, lucky.odds || "10/1") }));
+  luckyOdds.addEventListener("input", () => updateLucky({ odds: normalizeOdds(luckyOdds.value, lucky.odds || "100/1") }));
   luckyResult.addEventListener("change", () => updateLucky({ result: luckyResult.value }));
 }
 
@@ -355,7 +358,7 @@ function updateSummary() {
   }, 0);
 
   const luckyStakeValue = Math.max(0, numberOrDefault(luckyStake.value, lucky.stake || 0));
-  const luckyOddsValue = normalizeOdds(luckyOdds.value, lucky.odds || "10/1");
+  const luckyOddsValue = normalizeOdds(luckyOdds.value, lucky.odds || "100/1");
   const luckyPotential = potentialLeg(luckyStakeValue, luckyOddsValue, LUCKY_CODE, LUCKY_EACH_WAY);
   const luckyAchieved = achievedLeg(luckyStakeValue, luckyOddsValue, luckyResult.value, LUCKY_CODE, LUCKY_EACH_WAY);
   const luckySettledStake = settledLegStake(luckyStakeValue, luckyResult.value);
